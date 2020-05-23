@@ -9,3 +9,9 @@ To run the script, simply invoke it from the command line:
 ```
 
 The first parameter is the source file (the WOFF) font, and the second parameter is the output file (in OTF format).
+
+To convert all files in a directory, renaming them accordingly:
+
+```bash
+for i in *.woff; do ./woff2otf.py $i ${i%.woff}.otf; done
+```
